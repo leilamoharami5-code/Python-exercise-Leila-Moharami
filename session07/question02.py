@@ -1,21 +1,24 @@
 
 
-#قدم ۱ — ساخت تابع
+#قدم ۱ — ساخت تابع# قدم ۱ — ساخت تابع
 def process_order(customer, *products, **options):
-#قدم ۲ — فعلاً تابع را صدا بزن
+
+    # قدم ۲ — فعلاً تابع را صدا بزن
     print(customer)
     print(products)
     print(options)
-#قدم ۳ — حالا خروجی موردنظر را بساز
-#سؤال گفته خروجی باید شبیه این باشد:
+
+    # قدم ۳ — حالا خروجی موردنظر را بساز
     order = {
-    "customer": customer,
-    "products": list(products),
-    "discount": options.get("discount", 0),
-    "tax": options.get("tax", 0),
-    "shipping": options.get("shipping", 0),
-    "final_price": 0
-}
+        "customer": customer,
+        "products": list(products),
+        "discount": options.get("discount", 0),
+        "tax": options.get("tax", 0),
+        "shipping": options.get("shipping", 0),
+        "final_price": 0
+    }
+    return order
+
     
 '''چرا این مقدارها؟
 "customer": customer → اسم مشتری را از پارامتر می‌گیرد.
@@ -25,7 +28,7 @@ def process_order(customer, *products, **options):
 "shipping": options.get("shipping", 0) → هزینه ارسال را می‌گیرد؛ اگر داده نشد فعلاً 0.
 "final_price": 0 → فعلاً موقتاً صفر گذاشتیم، چون هنوز فرمول قیمت نهایی و قیمت محصولات را نداریم.'''
 
-    return order
+
 result = process_order(
     "Ali",
     "Laptop",
@@ -37,6 +40,5 @@ result = process_order(
 )
 
 print(result)
-
 
 
