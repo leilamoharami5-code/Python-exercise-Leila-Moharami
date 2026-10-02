@@ -1,3 +1,0 @@
-Ali,12345,active
-Sara,abc789,active
-Reza,45678,blocked
